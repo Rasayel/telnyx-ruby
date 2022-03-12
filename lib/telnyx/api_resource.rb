@@ -77,7 +77,7 @@ module Telnyx
 
     def refresh
       resp, opts = request(:get, resource_url, @retrieve_params, @opts)
-      initialize_from(resp.data[:data], opts)
+      initialize_from(resp.data[:data].presence || resp.data, opts)
     end
 
     def self.retrieve(id, opts = {})

@@ -75,6 +75,10 @@ require "telnyx/telephony_credential"
 require "telnyx/verification"
 require "telnyx/verify_profile"
 require "telnyx/wireless_detail_records_report"
+require "telnyx/whatsapp_contacts"
+require "telnyx/whatsapp_business_accounts"
+require "telnyx/whatsapp_messages"
+require "telnyx/whatsapp_phone_numbers"
 
 module Telnyx
   @app_info = nil

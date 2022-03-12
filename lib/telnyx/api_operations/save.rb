@@ -59,7 +59,7 @@ module Telnyx
 
         resp, opts = request(save_method, save_url, values, opts)
 
-        initialize_from(resp.data[:data], opts)
+        initialize_from(resp.data[:data].presence || resp.data, opts)
       end
 
       def self.included(base)
